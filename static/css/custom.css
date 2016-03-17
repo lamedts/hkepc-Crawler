@@ -1,0 +1,23 @@
+#header #brand {
+    font-weight: 900;
+    font-size: 2em;
+    float: left;
+    width: 100%;
+    text-align: center;
+}
+#header, #header div {
+    overflow: auto;
+}
+
+body {
+    font: 14px "Raleway", "HelveticaNeue", "Helvetica Neue", Helvetica, Arial, sans-serif;
+    border-top: 4px solid #222;
+}
+header {
+    padding: 3%;
+    border-bottom: 1px solid rgba(0,0,0,0.07);
+    margin-bottom: 2%;
+}
+input[readonly] {
+  background-color: white;
+}
