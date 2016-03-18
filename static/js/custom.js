@@ -54,6 +54,8 @@ var draw = function( data ) {
     //}
     var dataSet = data.rows
     sortJson( dataSet, "date", "string", false);   
+    console.log(data.time)
+    $("#updated").val("Update: " + data.time)
     $( "#tableBody" ).empty();
     for(var i = 0; i < dataSet.length; i++){
         var row = $("<tr />");
@@ -62,6 +64,7 @@ var draw = function( data ) {
         row.append($("<td>" + dataSet[i].catalog + "</td>"));
         row.append($("<td>" + dataSet[i].date + "</td>"));
         row.append($("<td><a href=\"http://www.hkepc.com/forum/" + dataSet[i].url + "\">" + dataSet[i].item + "</a></td>"));        
+        row.append($("<td>" + dataSet[i].last + "</td>"));
     }
 }
 $(document).ready(function(){
@@ -73,10 +76,22 @@ $(document).ready(function(){
         );
     });
     $("#keyword").on('input', function(){
-        if($(this).val != ""){
+        if($(this).val() != ""){
+	    filter = {'rows':[], 'time': orgData.time}
             var kwAry = $(this).val().replace(/(,| )+$/, '').split(/[ ,]+/)
-            console.log(kwAry);
-        }else{
+            //console.log(kwAry);
+            for(var i = 0; i < orgData.rows.length; i++){
+                for(var j = 0; j < kwAry.length; j++){
+                    var tmp = kwAry[j].toLowerCase()
+                    if(orgData.rows[i].item.toLowerCase().indexOf(tmp) > 0){
+		        filter.rows.push(orgData.rows[i])
+		    }
+                }
+            }
+            //console.log(filter)
+            draw(filter)
+        }else {
+            console.log('redraw')
             draw(orgData)
         }
     });

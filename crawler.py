@@ -2,6 +2,8 @@ import requests
 from bs4 import BeautifulSoup
 import lxml
 import time
+import datetime
+from pytz import timezone
 
 def main():
 	items_json = []
@@ -22,8 +24,10 @@ def main():
 					editInfo = rowSoup.find('td', {'class': 'author'})
 					author = BeautifulSoup(str(editInfo), 'lxml').find('a').get_text()
 					date = BeautifulSoup(str(editInfo), 'lxml').find('em').get_text()
+                                        last = rowSoup.find('td', {'class': 'lastpost'}).find('em').find('a').find('span').get('title')
 					url = aTag[2].get('href')
 					#print (catalog + ':' + item + ':' + author + ':'  + date)	
-					tmp = {'catalog':catalog, 'item':item, 'author':author, 'date':date, 'url':url}
+					tmp = {'catalog':catalog, 'item':item, 'author':author, 'date':date, 'url':url, 'last':last}
 					items_json.append(tmp)			
-	return ('ok', items_json)
+	return ('ok', items_json, datetime.datetime.now(timezone('Asia/Hong_Kong'))
+)

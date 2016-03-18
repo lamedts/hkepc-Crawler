@@ -442,3 +442,92 @@ socket.error: [Errno 98] Address already in use
 192.168.1.113 - - [17/Mar/2016 00:24:23] "GET /static/js/custom.js HTTP/1.1" 200 -
 192.168.1.113 - - [17/Mar/2016 00:24:30] "GET /api/get HTTP/1.1" 200 -
 192.168.1.113 - - [17/Mar/2016 00:25:12] "GET /crawl HTTP/1.1" 200 -
+192.168.1.108 - - [17/Mar/2016 01:12:31] "GET / HTTP/1.1" 200 -
+192.168.1.108 - - [17/Mar/2016 01:12:31] "GET /api/get HTTP/1.1" 200 -
+192.168.1.108 - - [17/Mar/2016 01:13:20] "GET /crawl HTTP/1.1" 200 -
+ * Detected change in '/root/hkepc/main.py', reloading
+ * Restarting with stat
+  File "/root/hkepc/main.py", line 16
+    global a, global b = crawler.main()
+                   ^
+SyntaxError: invalid syntax
+ * Running on http://0.0.0.0:5000/ (Press CTRL+C to quit)
+ * Restarting with stat
+ * Debugger is active!
+ * Debugger pin code: 310-952-901
+192.168.1.108 - - [17/Mar/2016 01:16:48] "GET / HTTP/1.1" 200 -
+192.168.1.108 - - [17/Mar/2016 01:16:55] "GET /api/get HTTP/1.1" 200 -
+ * Detected change in '/root/hkepc/crawler.py', reloading
+ * Restarting with stat
+Traceback (most recent call last):
+  File "main.py", line 8, in <module>
+    a, b = crawler.main()
+  File "/root/hkepc/crawler.py", line 30, in main
+    return ('ok', items_jsoni, datetime.datatime.now())
+NameError: global name 'items_jsoni' is not defined
+python: can't open file 'main.py.py': [Errno 2] No such file or directory
+ * Running on http://0.0.0.0:5000/ (Press CTRL+C to quit)
+ * Restarting with stat
+ * Debugger is active!
+ * Debugger pin code: 310-952-901
+192.168.1.108 - - [17/Mar/2016 01:30:43] "GET / HTTP/1.1" 200 -
+192.168.1.108 - - [17/Mar/2016 01:30:44] "GET /static/css/custom.css HTTP/1.1" 304 -
+192.168.1.108 - - [17/Mar/2016 01:30:44] "GET /static/js/custom.js HTTP/1.1" 200 -
+192.168.1.108 - - [17/Mar/2016 01:30:46] "GET /api/get HTTP/1.1" 200 -
+192.168.1.108 - - [17/Mar/2016 16:34:59] "GET /crawl HTTP/1.1" 200 -
+ * Running on http://0.0.0.0:5000/ (Press CTRL+C to quit)
+ * Restarting with stat
+ * Debugger is active!
+ * Debugger pin code: 310-952-901
+192.168.1.108 - - [17/Mar/2016 16:36:28] "GET / HTTP/1.1" 200 -
+192.168.1.108 - - [17/Mar/2016 16:36:29] "GET /static/css/custom.css HTTP/1.1" 304 -
+192.168.1.108 - - [17/Mar/2016 16:36:29] "GET /static/js/custom.js HTTP/1.1" 304 -
+192.168.1.108 - - [17/Mar/2016 16:36:32] "GET /api/get HTTP/1.1" 200 -
+192.168.1.108 - - [17/Mar/2016 16:39:44] "GET / HTTP/1.1" 200 -
+192.168.1.108 - - [17/Mar/2016 16:39:44] "GET /static/css/custom.css HTTP/1.1" 304 -
+192.168.1.108 - - [17/Mar/2016 16:39:44] "GET /static/js/custom.js HTTP/1.1" 200 -
+192.168.1.108 - - [17/Mar/2016 16:39:46] "GET /api/get HTTP/1.1" 200 -
+192.168.1.108 - - [17/Mar/2016 16:39:55] "GET / HTTP/1.1" 200 -
+192.168.1.108 - - [17/Mar/2016 16:39:56] "GET /static/css/custom.css HTTP/1.1" 304 -
+192.168.1.108 - - [17/Mar/2016 16:39:56] "GET /static/js/custom.js HTTP/1.1" 200 -
+192.168.1.108 - - [17/Mar/2016 16:39:57] "GET /api/get HTTP/1.1" 200 -
+ * Detected change in '/root/hkepc/crawler.py', reloading
+ * Restarting with stat
+ * Debugger is active!
+ * Debugger pin code: 310-952-901
+192.168.1.108 - - [17/Mar/2016 16:46:57] "GET / HTTP/1.1" 200 -
+192.168.1.108 - - [17/Mar/2016 16:46:57] "GET /static/css/custom.css HTTP/1.1" 304 -
+192.168.1.108 - - [17/Mar/2016 16:46:57] "GET /static/js/custom.js HTTP/1.1" 304 -
+192.168.1.108 - - [17/Mar/2016 16:47:00] "GET /api/get HTTP/1.1" 200 -
+ * Running on http://0.0.0.0:5000/ (Press CTRL+C to quit)
+ * Restarting with stat
+ * Debugger is active!
+ * Debugger pin code: 310-952-901
+192.168.1.108 - - [17/Mar/2016 16:48:18] "GET / HTTP/1.1" 200 -
+192.168.1.108 - - [17/Mar/2016 16:48:18] "GET /static/css/custom.css HTTP/1.1" 304 -
+192.168.1.108 - - [17/Mar/2016 16:48:18] "GET /static/js/custom.js HTTP/1.1" 304 -
+192.168.1.108 - - [17/Mar/2016 16:48:20] "GET /api/get HTTP/1.1" 200 -
+192.168.1.108 - - [17/Mar/2016 16:57:32] "GET / HTTP/1.1" 200 -
+192.168.1.108 - - [17/Mar/2016 16:57:32] "GET /static/css/custom.css HTTP/1.1" 304 -
+192.168.1.108 - - [17/Mar/2016 16:57:32] "GET /static/js/custom.js HTTP/1.1" 200 -
+192.168.1.108 - - [17/Mar/2016 16:57:53] "GET /api/get HTTP/1.1" 200 -
+192.168.1.108 - - [17/Mar/2016 16:58:07] "GET / HTTP/1.1" 200 -
+192.168.1.108 - - [17/Mar/2016 16:58:08] "GET /static/css/custom.css HTTP/1.1" 304 -
+192.168.1.108 - - [17/Mar/2016 16:58:08] "GET /static/js/custom.js HTTP/1.1" 200 -
+192.168.1.108 - - [17/Mar/2016 16:58:18] "GET /api/get HTTP/1.1" 200 -
+192.168.1.108 - - [17/Mar/2016 17:20:00] "GET / HTTP/1.1" 200 -
+192.168.1.108 - - [17/Mar/2016 17:20:01] "GET /static/css/custom.css HTTP/1.1" 304 -
+192.168.1.108 - - [17/Mar/2016 17:20:01] "GET /static/js/custom.js HTTP/1.1" 304 -
+192.168.1.108 - - [17/Mar/2016 17:20:02] "GET /api/get HTTP/1.1" 200 -
+192.168.1.108 - - [17/Mar/2016 17:20:10] "GET / HTTP/1.1" 200 -
+192.168.1.108 - - [17/Mar/2016 17:20:10] "GET /static/css/custom.css HTTP/1.1" 304 -
+192.168.1.108 - - [17/Mar/2016 17:20:10] "GET /static/js/custom.js HTTP/1.1" 304 -
+192.168.1.108 - - [17/Mar/2016 17:20:11] "GET /api/get HTTP/1.1" 200 -
+192.168.1.108 - - [17/Mar/2016 17:20:20] "GET / HTTP/1.1" 200 -
+192.168.1.108 - - [17/Mar/2016 17:20:21] "GET /static/css/custom.css HTTP/1.1" 304 -
+192.168.1.108 - - [17/Mar/2016 17:20:21] "GET /static/js/custom.js HTTP/1.1" 200 -
+192.168.1.108 - - [17/Mar/2016 17:20:22] "GET /api/get HTTP/1.1" 200 -
+ * Running on http://0.0.0.0:5000/ (Press CTRL+C to quit)
+ * Restarting with stat
+ * Debugger is active!
+ * Debugger pin code: 310-952-901

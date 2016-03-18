@@ -5,7 +5,7 @@ import crawler
 
 app = Flask(__name__)
 
-a, b = crawler.main()
+a, b, t = crawler.main()
 
 @app.route("/")
 def index():
@@ -13,12 +13,15 @@ def index():
 
 @app.route("/crawl")
 def crawl():
-    a, b = crawler.main()
-    return jsonify(rows=b)
+    global a
+    global b
+    global t
+    a, b, t = crawler.main()
+    return jsonify(rows=b, time=t)
 
 @app.route("/api/get")
 def getData():
-    return jsonify(rows=b)
+    return jsonify(rows=b, time=t)
 
 @app.route("/json")
 def jsontest():
