@@ -9,8 +9,6 @@ Flask
 
 ## Future
 
-Search Funciton
--
 
 ## Screen Cap
 ![alt tag](http://i.imgur.com/C3VD2U4.png)
