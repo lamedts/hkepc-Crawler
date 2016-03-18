@@ -10,5 +10,8 @@ Flask
 ## Future
 
 Search Funciton
-Adding updated time
+-
+
+## Screen Cap
+![alt tag](http://i.imgur.com/C3VD2U4.png)
 
